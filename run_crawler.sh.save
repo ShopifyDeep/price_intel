@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/Desktop/price-intel
+source venv/bin/activate
+python crawler/main.py
