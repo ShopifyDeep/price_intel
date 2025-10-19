@@ -2,6 +2,10 @@
 
 This project is a two-phase system for extracting and monitoring product prices from a predefined list of product URLs. It supports initial data collection and ongoing change tracking.
 
+- Uses a static list of product URLs in products.csv for the initial crawl.
+- The crawler reads this list, extracts product data, and saves it to product_data.csv.
+- The tracker then uses product_data.csv to monitor changes over time.
+
 ## Setup
 
 1. Install dependencies:
