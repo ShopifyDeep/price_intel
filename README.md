@@ -14,21 +14,21 @@ Create data/products.csv with the following format:
 
 csv
 name,url
-AirPods Pro,https://www.apple.com/shop/product/MLWK3AM/A/airpods-pro
-Sony WH-1000XM5,https://www.sony.com/electronics/headband-headphones/wh-1000xm5
-Configure settings:
+
+ ```AirPods Pro,https://www.apple.com/shop/product/MLWK3AM/A/airpods-pro
+Sony WH-1000XM5,https://www.sony.com/electronics/headband-headphones/wh-1000xm5 ```
 
 ## Configure settings:
 Edit config/settings.py to define paths and crawler behavior:
 
-import os
+ ```import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 USER_AGENT = "Mozilla/5.0 ..."
 TIMEOUT = 10
 
-os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(DATA_DIR, exist_ok=True) ```
 
 ## Phase 1: Initial Crawl
 Run the crawler to extract product titles and prices from your predefined list:
@@ -53,7 +53,7 @@ Compares current vs previous price
 
 Saves changes to product_changes.csv
 
-Notes
+##  Notes
 This crawler uses a predefined list of product URLs. It does not auto-discover product pages.
 
 Price extraction relies on simple HTML selectors (span.price, etc). You may need to customize these per domain.
